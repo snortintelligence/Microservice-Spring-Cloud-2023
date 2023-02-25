@@ -1,0 +1,26 @@
+public class Cart{
+    public int id;
+    public ArrayList<Product> products;
+    public int total;
+    public int discountedTotal;
+    public int userId;
+    public int totalProducts;
+    public int totalQuantity;
+}
+
+public class Product{
+    public int id;
+    public String title;
+    public int price;
+    public int quantity;
+    public int total;
+    public double discountPercentage;
+    public int discountedPrice;
+}
+
+public class Root{
+    public ArrayList<Cart> carts;
+    public int total;
+    public int skip;
+    public int limit;
+}

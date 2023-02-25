@@ -1,0 +1,27 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: 'true'
+  application:
+    name: CARTMICROSERVICE2
+  main:
+    allow-bean-definition-overriding: 'true'
+  datasource:
+    password: local
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: local
+    url: jdbc:oracle:thin:@localhost:1521:xe
+eureka:
+  instance:
+    prefer-ip-address: 'true'
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: 'true'
+    registerWithEureka: 'true'
+server:
+  port: '9092'
