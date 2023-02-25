@@ -1,0 +1,25 @@
+eureka:
+  client:
+    fetch-registry: true
+    registerWithEureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+server:
+  port: 8765
+spring:
+  application:
+    name: Spring-Cloud-Gateway
+  cloud:
+    gateway:
+      routes:
+        - id: CARTMICROSERVICE2
+          uri: lb://CARTMICROSERVICE2
+          predicates:
+          - Path=/carts/**
+        - id: PRODUCTSMICROSERVICE1
+          uri: lb://PRODUCTSMICROSERVICE1
+          predicates:
+          - Path=/products/**
