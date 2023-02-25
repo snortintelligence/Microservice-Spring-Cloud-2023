@@ -1,0 +1,553 @@
+{
+	"info": {
+		"_postman_id": "2163a6b6-91fb-4a3e-ae31-aba0cbe8047f",
+		"name": "Spring-Cloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24393596"
+	},
+	"item": [
+		{
+			"name": "dummy-api",
+			"item": [
+				{
+					"name": "fetch-products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/products",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch-save-carts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dummyjson.com/carts",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-carts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 21,\r\n    \"products\": [\r\n        {\r\n            \"id\": 1,\r\n            \"title\": \"iPhone 9\",\r\n            \"price\": 549,\r\n            \"quantity\": 1,\r\n            \"total\": 549,\r\n            \"discountPercentage\": 12.96,\r\n            \"discountedPrice\": 478\r\n        }\r\n    ],\r\n    \"total\": 549,\r\n    \"discountedTotal\": 478,\r\n    \"userId\": 1,\r\n    \"totalProducts\": 1,\r\n    \"totalQuantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dummyjson.com/carts/add",
+							"protocol": "https",
+							"host": [
+								"dummyjson",
+								"com"
+							],
+							"path": [
+								"carts",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products-service1",
+			"item": [
+				{
+					"name": "getProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createProducts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n {\r\n        \"title\": \"iPhone 9\",\r\n        \"description\": \"An apple mobile which is nothing like apple\",\r\n        \"price\": 549,\r\n        \"discountPercentage\": 12.96,\r\n        \"rating\": 4.69,\r\n        \"stock\": 94,\r\n        \"brand\": \"Apple\",\r\n        \"category\": \"smartphones\",\r\n        \"thumbnail\": \"https://i.dummyjson.com/data/products/1/thumbnail.jpg\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"title\": \"iPhone 3\",\r\n        \"description\": \"An apple mobile which is nothing like apple\",\r\n        \"price\": 549,\r\n        \"discountPercentage\": 12.96,\r\n        \"rating\": 4.69,\r\n        \"stock\": 94,\r\n        \"brand\": \"Apple 2\",\r\n        \"category\": \"smartphones\",\r\n        \"thumbnail\": \"https://i.dummyjson.com/data/products/1/thumbnail.jpg\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProductById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"title\": \"OPPOF19\",\r\n    \"description\": \"OPPO F19 is officially announced on April 2021.\",\r\n    \"price\": 280,\r\n    \"discountPercentage\": 17.91,\r\n    \"rating\": 4.3,\r\n    \"stock\": 123,\r\n    \"brand\": \"OPPO\",\r\n    \"category\": \"smartphones\",\r\n    \"thumbnail\": \"https://i.dummyjson.com/data/products/4/thumbnail.jpg\"\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/products/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"title\": \"OPPOF19\",\r\n    \"description\": \"OPPO F19 is officially announced on April 2021.\",\r\n    \"price\": 280,\r\n    \"discountPercentage\": 17.91,\r\n    \"rating\": 4.3,\r\n    \"stock\": 123,\r\n    \"brand\": \"OPPO\",\r\n    \"category\": \"smartphones\",\r\n    \"thumbnail\": \"https://i.dummyjson.com/data/products/4/thumbnail.jpg\"\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductByTitle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"title\": \"OPPOF19\",\r\n    \"description\": \"OPPO F19 is officially announced on April 2021.\",\r\n    \"price\": 280,\r\n    \"discountPercentage\": 17.91,\r\n    \"rating\": 4.3,\r\n    \"stock\": 123,\r\n    \"brand\": \"OPPO\",\r\n    \"category\": \"smartphones\",\r\n    \"thumbnail\": \"https://i.dummyjson.com/data/products/4/thumbnail.jpg\"\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9091/products/title/iPhone 9,iPhone X,Infinix INBOOK",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"products",
+								"title",
+								"iPhone 9,iPhone X,Infinix INBOOK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch-and-save-fake-products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/products/dummyapi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"products",
+								"dummyapi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "carts-service2",
+			"item": [
+				{
+					"name": "getCart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9092/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-Stock-Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9092/carts/products/stock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"carts",
+								"products",
+								"stock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-Stock-ProductsByTitle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"title\": \"iPhone 9\",\r\n        \"quantity\": 0\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9092/carts/products/title",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"carts",
+								"products",
+								"title"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-Stock-Products-byId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9092/carts/products/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"carts",
+								"products",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCart-products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"title\": \"iPhone X\",\r\n        \"quantity\": 1\r\n    },\r\n    {\r\n        \"title\": \"iPhone 9\",\r\n        \"quantity\": 2\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9092/carts/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"carts",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"title\": \"iPhone 9\",\r\n        \"description\": \"An apple mobile which is nothing like apple\",\r\n        \"price\": 549,\r\n        \"discountPercentage\": 12.96,\r\n        \"rating\": 4.69,\r\n        \"stock\": 94,\r\n        \"brand\": \"Apple\",\r\n        \"category\": \"smartphones\",\r\n        \"thumbnail\": \"https://i.dummyjson.com/data/products/1/thumbnail.jpg\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9092/carts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCart-Products-ById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"title\": \"OPPOF19\",\r\n    \"description\": \"OPPO F19 is officially announced on April 2021.\",\r\n    \"price\": 280,\r\n    \"discountPercentage\": 17.91,\r\n    \"rating\": 4.3,\r\n    \"stock\": 123,\r\n    \"brand\": \"OPPO\",\r\n    \"category\": \"smartphones\",\r\n    \"thumbnail\": \"https://i.dummyjson.com/data/products/4/thumbnail.jpg\"\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9092/carts/products/delete?cartId=3&prodId=5&prodId=6&prodId=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"carts",
+								"products",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "cartId",
+									"value": "3"
+								},
+								{
+									"key": "prodId",
+									"value": "5"
+								},
+								{
+									"key": "prodId",
+									"value": "6"
+								},
+								{
+									"key": "prodId",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCart-ById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"title\": \"OPPOF19\",\r\n    \"description\": \"OPPO F19 is officially announced on April 2021.\",\r\n    \"price\": 280,\r\n    \"discountPercentage\": 17.91,\r\n    \"rating\": 4.3,\r\n    \"stock\": 123,\r\n    \"brand\": \"OPPO\",\r\n    \"category\": \"smartphones\",\r\n    \"thumbnail\": \"https://i.dummyjson.com/data/products/4/thumbnail.jpg\"\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9092/carts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"carts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCartById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"title\": \"OPPOF19\",\r\n    \"description\": \"OPPO F19 is officially announced on April 2021.\",\r\n    \"price\": 280,\r\n    \"discountPercentage\": 17.91,\r\n    \"rating\": 4.3,\r\n    \"stock\": 123,\r\n    \"brand\": \"OPPO\",\r\n    \"category\": \"smartphones\",\r\n    \"thumbnail\": \"https://i.dummyjson.com/data/products/4/thumbnail.jpg\"\r\n}\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9092/carts/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9092",
+							"path": [
+								"carts",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
