@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import com.snort.inteli.cartapp.client.ClientProductService;
 import com.snort.inteli.cartapp.dto.ProductRequest;
@@ -23,9 +22,6 @@ public class ProductServiceImpl implements ProductService {
 
 	@Autowired
 	private ProductRepository productRepository;
-
-	@Autowired
-	RestTemplate restTemplate;
 
 	@Autowired
 	private ClientProductService clientProductService;

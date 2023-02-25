@@ -50,6 +50,12 @@ public class CartServiceImpl implements CartService {
 
 	@Override
 	public Cart updateCart(Cart cart) {
+		// Todo : calculate cart summary value before update
+		Map<String, String> map = CartUtils.getCartSummary(cart.getProducts());
+		cart.setTotal(Double.valueOf(map.get("total")));
+		cart.setDiscountedTotal(Double.valueOf(map.get("discountedTotal")));
+		cart.setTotalProducts(Integer.valueOf(map.get("totalProducts")));
+		cart.setTotalQuantity(Integer.valueOf(map.get("totalQuantity")));
 		return cartRepository.save(cart);
 	}
 
