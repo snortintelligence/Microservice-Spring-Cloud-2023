@@ -76,7 +76,7 @@ public class ProductServiceImpl implements ProductService {
 		HttpEntity<String> entity = new HttpEntity<String>(headers);
 		String titlesParam = products.stream().map(title -> title.getTitle()).collect(Collectors.toSet()).toString();
 		titlesParam = titlesParam.replaceAll("\\[", "").replaceAll("\\]", "").replaceAll(", ", ",");
-		String queryApi = "http://PRODUCTSMICROSERVICE1/products/title/" + titlesParam;
+		String queryApi = "http://PRODUCTSMICROSERVICE1/products/titles/" + titlesParam;
 		ResponseEntity<StockProductResponse[]> productsEntity = restTemplate.exchange(queryApi, HttpMethod.GET, entity,
 				StockProductResponse[].class);
 		StockProductResponse[] productsDtos = productsEntity.getBody();
