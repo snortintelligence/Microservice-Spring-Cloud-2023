@@ -548,6 +548,50 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Api-Gateway",
+			"item": [
+				{
+					"name": "getProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9091/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9091",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetch-and-save-fake-products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/products/dummyapi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"products",
+								"dummyapi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
