@@ -1,0 +1,24 @@
+server:
+  port: 9091
+spring:
+  application:
+        name: Payment-Micro-Service3
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    password: local
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: local
+  jpa:
+    hibernate:
+      ddl-auto: "create"
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect
+    show-sql: true
+
+eureka:
+    client:
+        fetch-registry: true
+        registerWithEureka: true
+        service-url:
+           defaultZone: http://localhost:8761/eureka   
