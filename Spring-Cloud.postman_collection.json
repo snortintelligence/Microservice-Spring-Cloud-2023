@@ -107,7 +107,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\r\n {\r\n        \"title\": \"iPhone 9\",\r\n        \"description\": \"An apple mobile which is nothing like apple\",\r\n        \"price\": 549,\r\n        \"discountPercentage\": 12.96,\r\n        \"rating\": 4.69,\r\n        \"stock\": 94,\r\n        \"brand\": \"Apple\",\r\n        \"category\": \"smartphones\",\r\n        \"thumbnail\": \"https://i.dummyjson.com/data/products/1/thumbnail.jpg\"\r\n    }\r\n]",
+							"raw": "[\r\n {\r\n        \"title\": \"iPhone 11\",\r\n        \"description\": \"An apple mobile which is nothing like apple\",\r\n        \"price\": 549,\r\n        \"discountPercentage\": 12.96,\r\n        \"rating\": 4.69,\r\n        \"stock\": 94,\r\n        \"brand\": \"Apple\",\r\n        \"category\": \"smartphones\",\r\n        \"thumbnail\": \"https://i.dummyjson.com/data/products/1/thumbnail.jpg\"\r\n    }\r\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -417,7 +417,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n        \"id\": 1,\r\n        \"title\": \"iPhone 9\",\r\n        \"description\": \"An apple mobile which is nothing like apple\",\r\n        \"price\": 549,\r\n        \"discountPercentage\": 12.96,\r\n        \"rating\": 4.69,\r\n        \"stock\": 94,\r\n        \"brand\": \"Apple\",\r\n        \"category\": \"smartphones\",\r\n        \"thumbnail\": \"https://i.dummyjson.com/data/products/1/thumbnail.jpg\"\r\n    }",
+							"raw": "{\r\n    \"cartId\": 1,\r\n    \"products\": [\r\n        {\r\n            \"prodId\": 1,\r\n            \"title\": \"iPhone 11 pro\",\r\n            \"price\": 549.0,\r\n            \"quantity\": 2,\r\n            \"total\": 1098.0,\r\n            \"discountPercentage\": 12.96,\r\n            \"discountedPrice\": 955.6992\r\n        },\r\n        {\r\n            \"prodId\": 2,\r\n            \"title\": \"iPhone 2X\",\r\n            \"price\": 899.0,\r\n            \"quantity\": 1,\r\n            \"total\": 899.0,\r\n            \"discountPercentage\": 17.94,\r\n            \"discountedPrice\": 737.7194\r\n        }\r\n    ],\r\n    \"cartTitle\": \"Cart9209\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
